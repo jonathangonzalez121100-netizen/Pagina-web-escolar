@@ -1,0 +1,227 @@
+:root{
+    --colorprimary:#2598BE;
+    --colorsecundary: #007197;
+    --colorbuttons: #e3e4ed;
+    --colorpetittions: #e3e4ed;
+    --colortextprimary:#e3e4ed;
+    --colortextsecundary:#007197;
+    --fontprimary: 'Courier New', Courier, monospace;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fontprimary);
+    font-size: 20px;
+    box-sizing: border-box;
+}
+/*Incio de estilos para la barra de Navegación*/
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 75px;
+    padding: 5px 10%;
+}
+header.header.abajo{
+    background-color: var(--colorprimary);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+.header .logo{
+    cursor: pointer;
+    margin-right: auto;
+}
+.header .logo:hover{
+    transform: scale(1.1);
+}
+.header .logo img{
+    height: 60px;
+    width: auto;
+    transition: all 0.3s;
+}
+.header .nav-links{
+    list-style: none;
+}
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+.header .nav-links li:hover{
+    transform: scale(1.1);
+}
+.header .nav-links a{
+    font-size: 700;
+    color: var(--colortextprimary);
+    text-decoration: none;
+}
+.header .nav-links a:hover{
+    color: var(--colortextsecundary);
+}
+/* Ocultamos el boton de Menu solo aparece cuando la pantalla sea menor a 800px*/
+.menu{
+    display: none;
+}
+
+.header .boton-navegar button,
+.header .menu button{
+    margin-left: 20px;
+    font-weight: 700;
+    color: var(--colortextsecundary);
+    padding: 9px 25px;
+    background: var(--colorbuttons);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.header .boton-navegar button:hover,
+.header .menu button:hover{
+    color: var(--colortextsecundary);
+    background-color: var(--colorbuttons);
+    transform: scale(1.1);
+}
+@media screen and (max-width:800px) {
+    .nav-links, .boton-navegar {
+        display: none;
+    }
+    .menu{
+        display: inherit;
+    }
+}
+/* Barra de Navegación para moviles */
+.header a{
+    text-decoration: none;
+}
+.header .overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(33, 49, 63, .95);
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+.header .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header .overlay a{
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color: var(--colortextprimary);
+}
+.header .overlay a:hover, 
+.header .overlay a:focus{
+    color: var(--colortextsecundary);
+}
+.header .overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+@media screen and (max-height:450px) {
+    .header .overlay .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+/* Fin de los estilos para el encabezado*/
+
+/*Fondo de la página web*/
+body{
+    background-image: url(img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: -1;
+}
+
+
+/* Inicio de estilos para el formulario*/
+.formulario-registro{
+    width: 400px;
+    background-color: var(--colorsecundary);
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: var(--fontprimary);
+}
+.formulario-registro h4{
+    font-size: 30px;
+    color: var(--colortextprimary);
+    margin-bottom: 20px;
+}
+
+.controles {
+    width: 100%;
+    background: var(--colorpetittions);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid var(--colorsecundary);
+    font-family: var(--fontprimary);
+    font-size: 18px;
+    color:var(--colortextsecundary);
+}
+
+.formulario-registro p {
+    height: 40px;
+    color: var(--colortextprimary);
+    text-align: center;
+    font-size: 18px;    
+}
+
+.formulario-registro a {
+    color: var(--colortextprimary);
+    text-decoration: none;
+}
+
+.formulario-registro a:hover {
+    color:var(--colortextprimary);
+    text-decoration: underline;
+}
+
+.formulario-registro .botones{
+    width: 100%;
+    background: var(--colorbuttons);
+    border: none;
+    padding: 12px;
+    color: var(--colortextsecundary);
+    margin: 16px 0;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.formulario-registro .botones button:hover{
+    color: var(--colortextsecundary);
+    background-color: var(--colorbuttons);
+    transform: scale(1.1);
+}
+.zona1{
+    height: 1000px;
+}

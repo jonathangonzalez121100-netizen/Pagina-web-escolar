@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>LPS</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="img/Logo.png" alt="">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Inscripciones</a></li>
+            </ul>
+        </nav>
+        <a class="boton-navegar" href="#"><button>Contacto</button></a>
+        
+        <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+
+        <div class="overlay" id="mobile-menu">
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+            <div class="overlay-content">
+                <a href="#">Nosotros</a>
+                <a href="#">Galeria</a>
+                <a href="#">Inscripciones</a>
+                <a href="#">Contacto</a>
+            </div>
+        </div>
+        
+    </header>
+
+    <script type="text/javascript" src="nav.js"></script>
+<section class="zona1">
+    <section class="formulario-registro">
+        <h4>Formulario de Registro</h4>
+        <input class="controles" type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre">
+        <input class="controles" type="text" name="apellido" id="apellido" placeholder="Ingrese su Apellido">
+        <input class="controles" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+        <input class="controles" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña">
+        <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+        <input class="botones" type="submit" value="Registrar">
+        <p><a href="#">¿Ya tengo una cuenta?</a></p>
+    </section>
+</section>
+</body>
+</html>
